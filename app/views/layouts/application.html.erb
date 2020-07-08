@@ -1,19 +1,12 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= full_title(yield(:title)) %></title>
-    <meta charset="utf-8">
-    <%#prevents cross-site request forgery%>
-    <%= csrf_meta_tags %>
-    <%#prevents XSS cross site scripting%>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag ('application', {media: 'all', 
-                                            'data-turbolinks-track': 'reload'}) %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
+  <%= render 'layouts/head'%>
   <body>
-    <%= yield %>
+    <%= render 'layouts/header' %>
+    <div class="container">
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    </div>
   </body>
 </html>
+

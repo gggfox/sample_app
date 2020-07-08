@@ -1,0 +1,12 @@
+<head>
+    <title><%= full_title(yield(:title)) %></title>
+    <meta charset="utf-8">
+    <%#prevents cross-site request forgery%>
+    <%= csrf_meta_tags %>
+    <%#prevents XSS cross site scripting%>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 
+                                            'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= render 'layouts/shrim' %>
+</head>
