@@ -9,7 +9,7 @@ class User < ApplicationRecord
                         uniqueness: true
     # makes sure there is passwords and password confirmation with hash
     has_secure_password
-    validates :password, presence: true, length: { minimum: 6 }
+    validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
     # Returns the hash digest of the given string
     def self.digest(string)
